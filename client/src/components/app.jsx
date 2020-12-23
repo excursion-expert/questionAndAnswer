@@ -18,11 +18,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       questions: [],
+      // pathname takes in a primary record through the URL from 1-100 (e.g. .../80) and renders that particular question and answer data from the database
       pathname: window.location.pathname.slice(1, window.location.pathname.length -1),
       modalShown: false
     }
     this.fetchQuestions = this.fetchQuestions.bind(this);
-    // this.answerQuestion = this.answerQuestion.bind(this);
     this.updateQuestion = this.updateQuestion.bind(this);
     this.addQuestion = this.addQuestion.bind(this);
     this.addAnswer = this.addAnswer.bind(this);
@@ -31,7 +31,6 @@ class App extends React.Component {
   }
 
   fetchQuestions() {
-    //Just want the listing ID, store as a variable in state? To pass in to all requests
     axios.get('/api/listings/' + this.state.pathname + '/questions/')
     .then((response) => {
       this.setState({
@@ -45,10 +44,8 @@ class App extends React.Component {
     var currentState = this.state.questions.slice();
     var newQuestion = {
       username: 'Matthew Crawford',
-      // might have to change from Matthew Crawford
       profilePic: 'https://picsum.photos/id/100/200',
-      date: '2020-11-16',
-      //Date hardcoded, will need to change
+      date: '2020-12-31',
       location: 'Seattle, Washington, United States',
       numContributions: 1,
       numHelpfulVotes: 0,
@@ -66,10 +63,8 @@ class App extends React.Component {
     var currentState = this.state.questions.slice();
     var newAnswer = {
       ansUsername: 'Matthew Crawford',
-      // might have to change from Matthew Crawford
       ansProfilePic: 'https://picsum.photos/id/100/200',
-      ansDate: '2020-11-16',
-      //Date hardcoded, will need to change
+      ansDate: '2020-12-31',
       ansAnswer: answer,
       likes: 0
     }

@@ -51,7 +51,7 @@ height: 36px;
 width: 77px;
 margin-right: 16px;
 cursor: pointer;
-  transition: 0.2s;
+transition: 0.2s;
   :hover {
     background-color: #292929;
   }
@@ -91,8 +91,6 @@ margin: -3px 8px 0 -3px;
 border-radius: 100%;
 display: inline-block;
 line-height: 18px;
-`
-const AnswerSubmission = styled.div `
 `
 const PostingGuidelines = styled.div `
 margin-top: 16px;
@@ -158,7 +156,7 @@ class AnswerQuestionBar extends React.Component {
             {this.state.expanded ?
             <div>
             <TextFieldExpanded placeholder="Answer question" rows="3" value={this.state.answerText} onChange={this.handleChange}></TextFieldExpanded>
-            <AnswerSubmission>
+            <div>
               <PostingGuidelines>
                 <Guidelines>Posting Guidelines</Guidelines>
               </PostingGuidelines>
@@ -166,12 +164,11 @@ class AnswerQuestionBar extends React.Component {
                 <SubmitAButton onClick={() => this.handleSubmit(this.props.questionIndex, this.state.answerText)}>Submit</SubmitAButton>
                 <SubmitQButton onClick={() => this.cancel()}>Cancel</SubmitQButton>
               </SubCancel>
-            </AnswerSubmission>
+            </div>
             </div>
             :
             <TextField placeholder="Answer question" value={this.state.answerText} onClick={this.handleClick}onChange={this.handleChange}></TextField>}
           </TextFieldDiv>
-          {/* <SubmitAButton onClick={() => this.handleSubmit(this.props.questionIndex, this.state.answerText)}>Submit</SubmitAButton> */}
         </Form>
       </AnswerBarStyled>
     )

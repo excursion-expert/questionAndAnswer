@@ -58,8 +58,6 @@ const Likes = styled.span`
   font-weight: 500;
   text-align: center;
 `
-const ThumbUp = styled.span`
-`
 const ThumbDown = styled.span`
   margin-bottom: -10px;
 `
@@ -89,14 +87,11 @@ class Answers extends React.Component {
     super(props)
     this.state = {
       showAll: false
-      // Need to make sure this is switched back to false
     }
     this.showTopAnswer = this.showTopAnswer.bind(this);
     this.showAllAnswers = this.showAllAnswers.bind(this);
     this.convertToMonthYear = this.convertToMonthYear.bind(this);
   }
-  // Next: get show all answers and show top answer to work, create functions that setState
-  // Then refactor the plus one vote and minus one vote functions to work
 
   showTopAnswer() {
     this.setState({
@@ -147,9 +142,9 @@ class Answers extends React.Component {
                   <AnswerBody>
                     {answer.ansAnswer}
                     <Votes>
-                      <ThumbUp>
+                      <span>
                         <Up className="far fa-thumbs-up" onClick={() => this.props.incrementVote(this.props.questionIndex, ansIndex)}></Up>
-                      </ThumbUp>
+                      </span>
                       <Likes>{answer.likes} votes</Likes>
                       <ThumbDown>
                         <Down className="far fa-thumbs-down" onClick={() => this.props.decrementVote(this.props.questionIndex, ansIndex)}></Down>
@@ -161,7 +156,6 @@ class Answers extends React.Component {
               </AnswersStyled>
             )
           })}
-          {/* <ShowAnswerButton onClick={this.showTopAnswer}>Show top answer</ShowAnswerButton> */}
         </div>
       )
     }
@@ -180,9 +174,9 @@ class Answers extends React.Component {
           <AnswerBody>
             {this.props.answers[0].ansAnswer}
             <Votes>
-              <ThumbUp>
+              <span>
                 <Up className="far fa-thumbs-up" onClick={() => this.props.incrementVote(this.props.questionIndex, 0)}></Up>
-              </ThumbUp>
+              </span>
               <Likes>{this.props.answers[0].likes} votes</Likes>
               <ThumbDown>
                 <Down className="far fa-thumbs-down" onClick={() => this.props.decrementVote(this.props.questionIndex, 0)}></Down>
@@ -207,9 +201,9 @@ class Answers extends React.Component {
           <AnswerBody>
             {this.props.answers[0].ansAnswer}
             <Votes>
-              <ThumbUp>
+              <span>
                 <Up className="far fa-thumbs-up" onClick={() => this.props.incrementVote(this.props.questionIndex, 0)}></Up>
-              </ThumbUp>
+              </span>
               <Likes>{this.props.answers[0].likes} votes</Likes>
               <ThumbDown>
                 <Down className="far fa-thumbs-down" onClick={() => this.props.decrementVote(this.props.questionIndex, 0)}></Down>

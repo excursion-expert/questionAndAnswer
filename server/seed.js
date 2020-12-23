@@ -4,28 +4,7 @@ const { QuestionSet } = require('../database/index.js');
 const { save } = require('../database/index.js');
 const axios = require('axios')
 
-//To return all from these collections on command line
-  //db.users.find() or db.questions.find() or db.answers.find()
-//When you're working on a branch and ready to push, do...
-//"git push origin" and then the branch name
-//Also think of it like git push <place i am pushing to> <thing i am pushing>
-// for a git pull
-  // switch back to main branch on github
-  // run git pull origin main from vs code (recommended by Joel- this will pull the main from github down to my local repo)
-  // OR (also recommended by Joel) just switch to branch main and run git merge <branch name>
 
-// var validImagesArray = []
-// var getValidImages = () => {
-//   axios.get('https://picsum.photos/v2/list?page=1&limit=100')
-//   .then((response) => {
-//     for (var i = 0; i < response.length; i++) {
-//       validImagesArray.push(response[i].url)
-//     }
-//   }).catch((error) => {
-//     console.log('THERE WAS AN ERROR: ')
-//   })
-// }
-// getValidImages();
 
 var getRandomPic = () => {
   var randomInt = Math.floor(Math.random() * (309-117) + 117)
@@ -33,31 +12,14 @@ var getRandomPic = () => {
   //The above IDs don't exist on picSum
   if (nonExistIds.indexOf(randomInt) > -1) {
     randomInt += 3;
-    return 'https://picsum.photos/id/' + randomInt + '/200';
-    // axios.get('https://picsum.photos/id/' + randomInt + '/200')
-    // .then((response) => {
-    //   console.log('response.headers: ', response.headers)
-    //   // return response.headers.location
-    // })
-    // .catch((error) => {
-    //   console.log('ERROR WITH SEED GET REQUEST')
-    // })
     // Plus 3 will guarantee no duplication
+    return 'https://picsum.photos/id/' + randomInt + '/200';
   } else {
     return 'https://picsum.photos/id/' + randomInt + '/200';
-    // axios.get('https://picsum.photos/id/' + randomInt + '/200')
-    // .then((response) => {
-    //   console.log('response.headers: ', response.headers)
-    //   // return response.headers.location
-    // })
-    // .catch((error) => {
-    //   console.log('ERROR WITH SEED GET REQUEST')
-    // })
   }
 }
 var createNewData = (index) => {
   var randomNumQuestions = Math.floor(Math.random() * 50) + 5;
-  // Changed the above value of Math.random to limit the number of questions to make postman parsing easier
   var questionsArray = [];
   var answersArray = []
   let prevQuesDate;
@@ -66,7 +28,6 @@ var createNewData = (index) => {
       var question = {
           username: faker.name.findName(),
           profilePic: getRandomPic(),
-          // USE THE V2 LIST TO GET VALID PHOTOS THEN PICK FROM THERE
           date: faker.date.past(),
           location: faker.address.city() + ', ' + faker.address.country(),
           numContributions: Math.floor(Math.random() * 200),
@@ -124,6 +85,7 @@ var createNewData = (index) => {
     }
   }
   save(newQuestionSet);
+  // This will save all new data into the Mongoose database
 }
 
 var generateNRecords = (n) => {
@@ -133,6 +95,7 @@ var generateNRecords = (n) => {
 }
 
 generateNRecords(100);
+// This invocation creates 100 records
 
 module.exports = {
   createNewData,

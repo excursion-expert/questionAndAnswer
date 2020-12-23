@@ -40,5 +40,3 @@ let save = (document) => {
 
 exports.QuestionSet = QuestionSet;
 exports.save = save;
-// exports.User = User;
-// exports.Answer = Answer;

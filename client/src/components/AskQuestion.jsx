@@ -19,7 +19,6 @@ const SubmitQButton = styled.button`
   border-width: 1px;
   display: inline-block;
   color: rgb(255, 255, 255);
-  // Will need to fix float
   padding-bottom: 8px;
   padding-top: 8px;
   padding-right: 16px;
@@ -77,7 +76,6 @@ class AskQuestion extends React.Component {
     this.state = {
       question: '',
       showModal: false
-      // SHOULD I BE ESCAPING THE QUESTION DATA?
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -154,7 +152,6 @@ class AskQuestion extends React.Component {
                 <SubmitQButton onClick={this.showModal}>Ask a question</SubmitQButton>
               </QandA>
             <AskQuestionBar>
-              {/* <TextField onChange={this.handleChange} value={this.state.question} name="question"></TextField> */}
             </AskQuestionBar>
             <Modal hideModal={this.hideModal} handleSubmit={this.handleSubmit}/>
               </Styling2>
