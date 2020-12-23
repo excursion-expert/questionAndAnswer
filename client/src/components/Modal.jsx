@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// To create a modal like Jordan had
-// Create an overlay div that grays out the screen with z-index of 2
-// Create a function that disables scrolling on the body 'hidden'
-// Give the modal itself a z-index of 5
-// Reference screen shots
-const TotalModal = styled.div`
-`
+
 const Form = styled.div `
 margin-top: 16px;
 `
@@ -28,8 +22,6 @@ border-radius: 100%;
 display: inline-block;
 line-height: 18px;
 `
-const ActualForm = styled.div `
-`
 const DisplayBlock = styled.div `
   display: block;
 `
@@ -45,26 +37,25 @@ cursor: pointer;
 }
 `
 const ModalDisplay = styled.div`
-  position: fixed;
-  background: white;
-  width: 70%;
-  height: auto;
-  top: 30%;
-  left: 50%;
-  border-color: black;
-  border-width: 1px;
-  transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px 0px;
-  z-index: 3;
+position: fixed;
+background: white;
+width: 70%;
+height: auto;
+top: 30%;
+left: 50%;
+border-color: black;
+border-width: 1px;
+transform: translate(-50%, -50%);
+box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px 0px;
+z-index: 3;
 `
 const AskAQuestion = styled.div`
-  padding: 16px 48px 16px 24px;
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  background-color: rgb(242, 242, 242);
-
+padding: 16px 48px 16px 24px;
+display: block;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+background-color: rgb(242, 242, 242);
 `
 const TextFieldExpanded = styled.textarea`
 box-sizing: border-box;
@@ -83,47 +74,47 @@ resize: none;
 TextFieldExpanded.displayName = 'TextFieldExpanded';
 
 const SubmitAButton = styled.button`
-  background-color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  border-width: 1px;
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding-bottom: 8px;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-left: 16px;
-  text-align: center;
-  height: 36px;
-  width: 77px;
-  margin-right: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-  :hover {
-    background-color: #292929;
-  }
+background-color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);
+border-radius: 3px;
+border-width: 1px;
+color: rgb(255, 255, 255);
+display: inline-block;
+padding-bottom: 8px;
+padding-top: 8px;
+padding-right: 16px;
+padding-left: 16px;
+text-align: center;
+height: 36px;
+width: 77px;
+margin-right: 16px;
+cursor: pointer;
+transition: 0.2s;
+:hover {
+  background-color: #292929;
+}
 `
 SubmitAButton.displayName = 'SubmitAButton';
 
 const SubmitQButton = styled.button`
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  border-width: 1px;
-  color: rgb(0, 0, 0);
-  display: inline-block;
-  padding-bottom: 8px;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-left: 16px;
-  text-align: center;
-  height: 36px;
-  width: 77px;
-  cursor: pointer;
-  transition: 0.2s;
-  :hover {
-    background-color: #d6d6d6;
-  }
+background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);
+border-radius: 3px;
+border-width: 1px;
+color: rgb(0, 0, 0);
+display: inline-block;
+padding-bottom: 8px;
+padding-top: 8px;
+padding-right: 16px;
+padding-left: 16px;
+text-align: center;
+height: 36px;
+width: 77px;
+cursor: pointer;
+transition: 0.2s;
+:hover {
+  background-color: #d6d6d6;
+}
 `
 SubmitQButton.displayName = 'SubmitQButton'
 const AnswerSubmission = styled.div`
@@ -166,7 +157,7 @@ class Modal extends React.Component {
   render() {
     return (
       <ModalDisplay>
-        <TotalModal>
+        <div>
           <AskAQuestion>
             <i className="far fa-comment-alt"></i>
             <span> Ask a question</span>
@@ -178,7 +169,7 @@ class Modal extends React.Component {
             <QuickAnswers>Get Quick answers from staff and past guests.</QuickAnswers>
             <Form>
             <Image src={`https://picsum.photos/id/100/200`}></Image>
-            <ActualForm>
+            <div>
             <TextFieldExpanded placeholder="Hi, what would you like to know about this attraction?" rows="5" onChange={this.handleChange} value={this.state.question}></TextFieldExpanded>
             <Note>Note: your question will be posted publicly on the Questions & Answers page.</Note>
             <AnswerSubmission>
@@ -192,10 +183,10 @@ class Modal extends React.Component {
                 <SubmitQButton onClick={() => this.props.hideModal()}>Cancel</SubmitQButton>
               </SubCancel>
             </AnswerSubmission>
-            </ActualForm>
+            </div>
             </Form>
           </Overall>
-        </TotalModal>
+        </div>
       </ModalDisplay>
     )
   }

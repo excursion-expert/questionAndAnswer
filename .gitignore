@@ -1,2 +1,4 @@
 node_modules
 questions.pem
+server/privatenotes.js
+login.sh

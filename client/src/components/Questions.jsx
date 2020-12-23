@@ -26,8 +26,6 @@ const QuestionHeader = styled.div`
 const QuestionHeaderInfo = styled.div`
 display: block;
 `
-const AnswerBar = styled.form`
-`
 const Image = styled.img`
 height: 42px;
 width: 42px;
@@ -54,12 +52,6 @@ const LocationContVotes = styled.div`
   font-size: 12px;
   line-height: 16px;
   color: #8c8c8c;
-`
-const Location = styled.span`
-`
-const NumContributions = styled.span`
-`
-const NumHelpfulVotes = styled.span`
 `
 const Buttons = styled.div`
   margin-bottom: 12px;
@@ -141,7 +133,6 @@ class Questions extends React.Component {
     })
   }
   handleSubmit(index, answerText) {
-    // fix with event as parameter?
     event.preventDefault();
     this.props.addAnswer(answerText, index);
     this.reinitializeState();
@@ -205,9 +196,9 @@ class Questions extends React.Component {
                       <div><BoldSpan>{question.username}</BoldSpan> asked a question {this.convertToMonthYear(question.date)}</div>
                     </UserAndDate>
                     <LocationContVotes>
-                      <span><i className="fas fa-map-marker-alt"></i></span><Location> {question.location} </Location>
-                      {question.numContributions > 0 ? <NumContributions><CircleIcon><i className="fas fa-circle"></i></CircleIcon><BoldSpan> {question.numContributions} </BoldSpan> contributions </NumContributions> : null}
-                      {question.numHelpfulVotes > 0 ? <NumHelpfulVotes><CircleIcon><i className="fas fa-circle"></i></CircleIcon><BoldSpan> {question.numHelpfulVotes} </BoldSpan> helpful votes</NumHelpfulVotes> : null}
+                      <span><i className="fas fa-map-marker-alt"></i></span><span> {question.location} </span>
+                      {question.numContributions > 0 ? <span><CircleIcon><i className="fas fa-circle"></i></CircleIcon><BoldSpan> {question.numContributions} </BoldSpan> contributions </span> : null}
+                      {question.numHelpfulVotes > 0 ? <span><CircleIcon><i className="fas fa-circle"></i></CircleIcon><BoldSpan> {question.numHelpfulVotes} </BoldSpan> helpful votes</span> : null}
                     </LocationContVotes>
                   </QuestionHeaderInfo>
                 </QuestionHeader>
@@ -233,6 +224,3 @@ class Questions extends React.Component {
 }
 
 export default Questions;
-
-// ways to fix this issue:
-// move lines 85-100 to a new component
