@@ -62,8 +62,10 @@ const Buttons = styled.div`
   border-right-width: 0px;
   border-left-width: 0px;
   border-bottom-width: 0px;
+  display: 'flex';
+  flex-direction: 'row';
 `
-const ButtonsSpan = styled.div `
+const ButtonsSpan = styled.div`
 display: inline-block;
 `
 const PrevButton = styled.button`
@@ -72,8 +74,6 @@ border-color: rgb(0, 0, 0);
 border-radius: 3px;
 border-width: 1px;
 color: rgb(0, 0, 0);
-display: inline-block;
-float: left;
 padding-bottom: 8px;
 padding-top: 8px;
 padding-right: 16px;
@@ -99,6 +99,8 @@ padding-left: 16px;
 text-align: center;
 height: 36px;
 width: 77px;
+justify-content: 'flex-end';
+
 `
 NextButton.displayName = 'NextButton';
 
@@ -213,11 +215,9 @@ class Questions extends React.Component {
           )
         })}
         <Buttons>
-          <ButtonsSpan>
-            {this.state.currentPage > 1 ? <PrevButton onClick={this.prevPage}>Previous</PrevButton> : null}
-            {this.state.currentPage * 5 > this.props.questions.length ? null : <NextButton onClick={this.nextPage}>Next</NextButton>}
-            </ButtonsSpan>
-          </Buttons>
+          {this.state.currentPage > 1 ? <PrevButton onClick={this.prevPage}>Previous</PrevButton> : null}
+          {this.state.currentPage * 5 > this.props.questions.length ? null : <NextButton onClick={this.nextPage}>Next</NextButton>}
+        </Buttons>
       </Body>
     )
   }

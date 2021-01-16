@@ -4,12 +4,12 @@ import axios from 'axios';
 import Questions from './Questions.jsx';
 import AskQuestion from './AskQuestion.jsx';
 
-const Main = styled.div `
+const Main = styled.div`
   background-color: #f2f2f2;
   font-family: 'Poppins';
   font-weight: 200;
 `
-const WholeModule = styled.div `
+const WholeModule = styled.div`
   padding: 12px;
   width: 66.6666677%;
 `
@@ -19,7 +19,7 @@ class App extends React.Component {
     this.state = {
       questions: [],
       // pathname takes in a primary record through the URL from 1-100 (e.g. .../80) and renders that particular question and answer data from the database
-      pathname: window.location.pathname.slice(1, window.location.pathname.length -1),
+      pathname: window.location.pathname.slice(1, window.location.pathname.length - 1),
       modalShown: false
     }
     this.fetchQuestions = this.fetchQuestions.bind(this);
@@ -32,13 +32,13 @@ class App extends React.Component {
 
   fetchQuestions() {
     axios.get('/api/listings/' + this.state.pathname + '/questions/')
-    .then((response) => {
-      this.setState({
-        questions: response.data[0].questions
+      .then((response) => {
+        this.setState({
+          questions: response.data[0].questions
+        })
+      }).catch((error) => {
+        console.log('THERE WAS AN ERROR: ')
       })
-    }).catch((error) => {
-      console.log('THERE WAS AN ERROR: ')
-    })
   }
   addQuestion(question) {
     var currentState = this.state.questions.slice();
@@ -107,8 +107,8 @@ class App extends React.Component {
     return (
       <Main className="parent">
         <WholeModule>
-          <AskQuestion questions={this.state.questions} addQuestion={this.addQuestion}/>
-          <Questions questions={this.state.questions} addAnswer={this.addAnswer}  plusOneVote={this.plusOneVote} minusOneVote={this.minusOneVote}/>
+          <AskQuestion questions={this.state.questions} addQuestion={this.addQuestion} />
+          <Questions questions={this.state.questions} addAnswer={this.addAnswer} plusOneVote={this.plusOneVote} minusOneVote={this.minusOneVote} />
         </WholeModule>
       </Main>
     )

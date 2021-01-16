@@ -1,31 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Form = styled.div `
+const Form = styled.div`
 margin-top: 16px;
 `
-const Overall = styled.div `
+const Overall = styled.div`
 padding: 48px 48px;
 `
-const Note = styled.div `
+const Note = styled.div`
 font-size: 12px;
 `
-const QuickAnswers = styled.div `
+const QuickAnswers = styled.div`
 font-weight: 500;
 `
-const Image = styled.img `
+const Image = styled.img`
 height: 28px;
 width: 28px;
 float: left;
 margin: -3px 8px 0 -3px;
 border-radius: 100%;
-display: inline-block;
 line-height: 18px;
 `
-const DisplayBlock = styled.div `
+const DisplayBlock = styled.div`
   display: block;
 `
-const XButton = styled.div `
+const XButton = styled.div`
 position: absolute;
 font-size: 16px;
 font-weight: 500;
@@ -45,10 +44,12 @@ top: 30%;
 left: 50%;
 border-color: black;
 border-width: 1px;
+margin-top: 95px;
 transform: translate(-50%, -50%);
 box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px 0px;
 z-index: 3;
 `
+
 const AskAQuestion = styled.div`
 padding: 16px 48px 16px 24px;
 display: block;
@@ -66,12 +67,16 @@ border-radius: 2px;
 padding: 12px;
 border-color: rgb(224, 224, 224);
 font-family: Poppins;
-display: inline-block;
-width: 95%;
-overflow: hidden;
-resize: none;
+width: 90%;
+justify-content: 'flex-end';
 `
 TextFieldExpanded.displayName = 'TextFieldExpanded';
+
+const PicTextBox = styled.div`
+display: 'flex';
+flex-direction: 'row';
+width: 100%;
+`
 
 const SubmitAButton = styled.button`
 background-color: rgb(0, 0, 0);
@@ -168,22 +173,22 @@ class Modal extends React.Component {
           <Overall>
             <QuickAnswers>Get Quick answers from staff and past guests.</QuickAnswers>
             <Form>
-            <Image src={`https://picsum.photos/id/100/200`}></Image>
-            <div>
-            <TextFieldExpanded placeholder="Hi, what would you like to know about this attraction?" rows="5" onChange={this.handleChange} value={this.state.question}></TextFieldExpanded>
-            <Note>Note: your question will be posted publicly on the Questions & Answers page.</Note>
-            <AnswerSubmission>
-              <DisplayBlock>
-              <PostingGuidelines>
-                <Guidelines>Posting Guidelines</Guidelines>
-              </PostingGuidelines>
-              </DisplayBlock>
-              <SubCancel>
-                <SubmitAButton onClick={this.handleSubmit}>Submit</SubmitAButton>
-                <SubmitQButton onClick={() => this.props.hideModal()}>Cancel</SubmitQButton>
-              </SubCancel>
-            </AnswerSubmission>
-            </div>
+              <PicTextBox>
+                <Image src={`https://picsum.photos/id/100/200`}></Image>
+                <TextFieldExpanded placeholder="Hi, what would you like to know about this attraction?" rows="5" onChange={this.handleChange} value={this.state.question}></TextFieldExpanded>
+              </PicTextBox>
+              <Note>Note: your question will be posted publicly on the Questions & Answers page.</Note>
+              <AnswerSubmission>
+                <DisplayBlock>
+                  <PostingGuidelines>
+                    <Guidelines>Posting Guidelines</Guidelines>
+                  </PostingGuidelines>
+                </DisplayBlock>
+                <SubCancel>
+                  <SubmitAButton onClick={this.handleSubmit}>Submit</SubmitAButton>
+                  <SubmitQButton onClick={() => this.props.hideModal()}>Cancel</SubmitQButton>
+                </SubCancel>
+              </AnswerSubmission>
             </Form>
           </Overall>
         </div>

@@ -4,7 +4,7 @@ const { QuestionSet } = require('../database/index.js');
 const { save } = require('../database/index.js');
 const axios = require('axios')
 
-
+// use "npm run seed" on command line from root directory to generate seed data
 
 var getRandomPic = () => {
   var randomInt = Math.floor(Math.random() * (309-117) + 117)
