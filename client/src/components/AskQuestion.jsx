@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Modal from './Modal.jsx';
 
-const Header = styled.div `
+const Header = styled.div`
   background-color: rgb(255, 255, 255);
 `
-const AskQuestionBar = styled.form `
+const AskQuestionBar = styled.form`
 
 `
-const TextField = styled.textarea `
+const TextField = styled.textarea`
 `
 TextField.displayName = 'TextField';
 
@@ -36,18 +36,18 @@ const SubmitQButton = styled.button`
 `
 SubmitQButton.displayName = 'SubmitQButton'
 
-const LowerSpanDiv = styled.div `
+const LowerSpanDiv = styled.div`
 padding: 0 24px;
 margin-bottom: 24px;
 `
-const Styling1 = styled.div `
+const Styling1 = styled.div`
   padding-top: 16px;
 
 `
-const Styling2 = styled.div `
+const Styling2 = styled.div`
 padding-bottom: 18px;
 `
-const TopSpan = styled.div `
+const TopSpan = styled.div`
   padding: 16px 12px;
   font-size: 14px;
   line-height: 18px;
@@ -55,17 +55,17 @@ const TopSpan = styled.div `
   position: relative;
   font-weight: 500;
 `
-const TopSpanDiv = styled.div `
+const TopSpanDiv = styled.div`
   border: solid #e0e0e0;
   border-width: 1px;
 `
-const QandA = styled.div `
+const QandA = styled.div`
   display: block;
   width: 60%;
   font-size: 28px;
   font-weight: 500;
 `
-const SeeAll = styled.div `
+const SeeAll = styled.div`
   font-size: 14px;
   font-weight: 500;
 `
@@ -121,14 +121,14 @@ class AskQuestion extends React.Component {
           <LowerSpanDiv>
             <Styling1>
               <Styling2>
-              <QandA>
-                Questions & Answers
+                <QandA>
+                  Questions & Answers
                 <SeeAll>See all {this.props.questions.length} questions</SeeAll>
-                <SubmitQButton onClick={() => this.showModal()}>Ask a question</SubmitQButton>
-              </QandA>
-            <AskQuestionBar>
-              {/* <TextField onChange={this.handleChange} value={this.state.question} name="question"></TextField> */}
-            </AskQuestionBar>
+                  <SubmitQButton onClick={() => this.showModal()}>Ask a question</SubmitQButton>
+                </QandA>
+                <AskQuestionBar>
+                  {/* <TextField onChange={this.handleChange} value={this.state.question} name="question"></TextField> */}
+                </AskQuestionBar>
               </Styling2>
             </Styling1>
           </LowerSpanDiv>
@@ -146,14 +146,14 @@ class AskQuestion extends React.Component {
           <LowerSpanDiv>
             <Styling1>
               <Styling2>
-              <QandA>
-                Questions & Answers
+                <QandA>
+                  Questions & Answers
                 <SeeAll>See all {this.props.questions.length} questions</SeeAll>
-                <SubmitQButton onClick={this.showModal}>Ask a question</SubmitQButton>
-              </QandA>
-            <AskQuestionBar>
-            </AskQuestionBar>
-            <Modal hideModal={this.hideModal} handleSubmit={this.handleSubmit}/>
+                  <SubmitQButton onClick={this.showModal}>Ask a question</SubmitQButton>
+                </QandA>
+                <AskQuestionBar>
+                </AskQuestionBar>
+                <Modal hideModal={this.hideModal} handleSubmit={this.handleSubmit} />
               </Styling2>
             </Styling1>
           </LowerSpanDiv>

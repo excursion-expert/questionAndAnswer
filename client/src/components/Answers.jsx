@@ -61,13 +61,13 @@ const Likes = styled.span`
 const ThumbDown = styled.span`
   margin-bottom: -10px;
 `
-const Up = styled.i `
+const Up = styled.i`
 cursor: pointer;
   :hover {
     color: #292929;
   }
 `
-const Down = styled.i `
+const Down = styled.i`
   cursor: pointer;
   :hover {
     color: #292929;
@@ -135,7 +135,7 @@ class Answers extends React.Component {
                     <AnswerFrom><span>Answer from <Username>{answer.ansUsername}</Username></span></AnswerFrom>
                     <div>
                       <DateAndEllipsis>
-                      {this.convertToMonthYear(answer.ansDate)} | <Ellipsis><span><i className="fas fa-ellipsis-h"></i></span></Ellipsis>
+                        {this.convertToMonthYear(answer.ansDate)} | <Ellipsis><span><i className="fas fa-ellipsis-h"></i></span></Ellipsis>
                       </DateAndEllipsis>
                     </div>
                   </AnswersHeader>
