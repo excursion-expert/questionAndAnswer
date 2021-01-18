@@ -11,11 +11,11 @@ The service was built with React, backed with a MongoDB database. Styling was do
 2. 
 
 # Screen Grabs
-## Asking a Question
+### Asking a Question
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/askquestion.gif "ask question")
 
-## Answer a Question
+### Answer a Question
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/answerquestion.gif "answer question")
 
