@@ -11,6 +11,17 @@ The service was built with React, backed with a MongoDB database. Styling was do
 2. Run 'npm install' from the root directory.
 3. Install MongoDB.
 
+### Seeding the Database
+
+This application requires data to be seeded into the database. The file server/seed.js accomplishes this task for you.
+
+`npm run seed`
+
+To make sure the data has seeded...
+
+`mongo
+use fetcher`
+
 ## Screen Grabs
 ### Ask a Question
 
