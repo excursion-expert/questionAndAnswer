@@ -10,7 +10,7 @@ The service was built with React, backed with a MongoDB database. Styling was do
 1. Fork the repo and clone to your local machine.
 2. 
 
-# Screen Grabs
+## Screen Grabs
 ### Asking a Question
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/askquestion.gif "ask question")
