@@ -41,7 +41,15 @@ This will start the project in your web browser.
 
 ### Navigating Primary Records
 
-If you navigate to your localhost, you 
+If you navigate to your localhost, you will see an error that looks like the following:
+
+<img src="https://github.com/excursion-expert/questionAndAnswer/blob/main/cannotget.png">
+
+This is because you have not navigated to a primary record. You must include a primary record from 1-100 at the end of the url. For example:
+
+`localhost:3004/3`
+
+Once you have done this, you should see a web page that looks like the below screen grabs! If you feel like looking at the project without setting everything up, just keep scrolling down!
 
 ## Screen Grabs
 ### Ask a Question
