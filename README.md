@@ -7,7 +7,7 @@ The service was built with React, backed with a MongoDB database. Styling was do
 
 ### Getting Started
 
-(If you feel like checking out the project without setting everything up, just keep scrolling down!)
+If you feel like checking out the project without setting everything up, scroll down to 'Usage' and check out the GIFs of the site in action!
 
 1. Fork the repo and clone to your local machine.
 2. Run 'npm install' from the root directory.
