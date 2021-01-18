@@ -1,5 +1,7 @@
-# questionAndAnswer
-This is the questions and answers portion of a vacation planning site
+
+
+# Question & Answer
+I worked on a team of engineers designing Excursion Expert, a travel information site. I was responsible for the question and answer service on the site.
 
 ## Asking a Question
 
