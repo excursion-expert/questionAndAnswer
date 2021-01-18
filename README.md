@@ -15,6 +15,8 @@ If you feel like checking out the project without setting everything up, scroll 
 2. Run 'npm install' from the root directory.
 3. Install MongoDB.
 
+You will also need to install nodemon if you do not already have it installed.
+
 ### Seeding the Database
 
 This application requires data to be seeded into the database. The file server/seed.js accomplishes this task for you.
