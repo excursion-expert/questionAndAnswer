@@ -39,6 +39,10 @@ This starts up webpack.
 
 This will start the project in your web browser.
 
+### Navigating Primary Records
+
+If you navigate to your localhost, you 
+
 ## Screen Grabs
 ### Ask a Question
 
