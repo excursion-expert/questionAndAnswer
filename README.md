@@ -51,7 +51,7 @@ This is because you have not navigated to a primary record. You must include a p
 
 Once you have done this, you should see a web page that looks like the below screen grabs! If you feel like looking at the project without setting everything up, just keep scrolling down!
 
-## Screen Grabs
+## Usage
 ### Ask a Question
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/askquestion.gif "ask question")
