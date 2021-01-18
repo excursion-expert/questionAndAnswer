@@ -5,7 +5,7 @@ I worked on a team of engineers designing Excursion Expert, a travel information
 
 The service was built with React, backed with a MongoDB database and Express server.
 
-:rainbow:**_Want to skip to the fun part? Keep scrolling down to see GIFs of the site in action_**:rainbow:
+:rainbow: **_Want to skip to the fun part? Keep scrolling down to see GIFs of the site in action_** :rainbow:
 
 ### Getting Started
 
