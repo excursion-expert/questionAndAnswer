@@ -5,6 +5,8 @@ I worked on a team of engineers designing Excursion Expert, a travel information
 
 The service was built with React, backed with a MongoDB database and Express server.
 
+**_Want to skip to the fun part? Keep scrolling down to see GIFs of the site in action_**
+
 ### Getting Started
 
 If you feel like checking out the project without setting everything up, scroll down to 'Usage' and check out the GIFs of the site in action!
