@@ -22,7 +22,22 @@ To make sure the data has seeded...
 ```
 mongo
 use fetcher
+db.questions.find()
 ```
+
+This will return all 100 primary records. Each primary record will consist of 1-50 questions, and 0-4 answers.
+
+### Booting Up
+
+To run this project in your web browser, run the following:
+
+`npm run build`
+
+This starts up webpack.
+
+`npm start`
+
+This will start the project in your web browser.
 
 ## Screen Grabs
 ### Ask a Question
