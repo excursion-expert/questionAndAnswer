@@ -76,7 +76,7 @@ Once you have done this, you should see a web page that looks like the below scr
 
 ## Acknowledgments
 
-- [Font Awesome] (https://fontawesome.com/)
+- [Font Awesome](https://fontawesome.com/)
 - Styled Components
 
 
