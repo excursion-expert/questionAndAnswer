@@ -19,14 +19,14 @@ The service was built with React, backed with a MongoDB database. Styling was do
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/answerquestion.gif "answer question")
 
-## Previous/Next
+### Previous/Next
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/prevnext.gif "previous page/next page")
 
-## Thumbs Up/Thumbs Down
+### Thumbs Up/Thumbs Down
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/thumbsup.gif "thumbs up")
 
-## Show all Answers
+### Show all Answers
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/showallanswers.gif "show all answers")
