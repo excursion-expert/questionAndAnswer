@@ -8,7 +8,8 @@ The service was built with React, backed with a MongoDB database. Styling was do
 ### Getting Started
 
 1. Fork the repo and clone to your local machine.
-2. 
+2. Run 'npm install' from the root directory.
+3. Install MongoDB.
 
 ## Screen Grabs
 ### Ask a Question
