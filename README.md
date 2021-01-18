@@ -1,4 +1,4 @@
-<img src="https://github.com/excursion-expert/questionAndAnswer/blob/main/WhiteBackgroundLogo.png" width="50px">
+<img src="https://github.com/excursion-expert/questionAndAnswer/blob/main/WhiteBackgroundLogo.png" width="300px">
 
 # Question & Answer
 I worked on a team of engineers designing Excursion Expert, a travel information site. I was responsible for the question and answer service on the site.
