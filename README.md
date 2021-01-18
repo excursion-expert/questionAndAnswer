@@ -19,8 +19,10 @@ This application requires data to be seeded into the database. The file server/s
 
 To make sure the data has seeded...
 
-`mongo
-use fetcher`
+```
+mongo
+use fetcher
+```
 
 ## Screen Grabs
 ### Ask a Question
