@@ -73,3 +73,10 @@ Once you have done this, you should see a web page that looks like the below scr
 ### Show all Answers
 
 ![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/showallanswers.gif "show all answers")
+
+## Acknowledgments
+
+- Font Awesome
+- Styled Components
+
+
