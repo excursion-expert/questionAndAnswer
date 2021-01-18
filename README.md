@@ -17,7 +17,7 @@ This application requires data to be seeded into the database. The file server/s
 
 `npm run seed`
 
-To make sure the data has seeded...
+To make sure the data has seeded, run the following from the command line:
 
 ```
 mongo
