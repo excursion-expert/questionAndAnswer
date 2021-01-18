@@ -1,4 +1,4 @@
-![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/WhiteBackgroundLogo.png "Logo")
+![Alt Text](https://github.com/excursion-expert/questionAndAnswer/blob/main/WhiteBackgroundLogo.png "Logo" width=50px;)
 
 # Question & Answer
 I worked on a team of engineers designing Excursion Expert, a travel information site. I was responsible for the question and answer service on the site.
