@@ -7,6 +7,8 @@ The service was built with React, backed with a MongoDB database. Styling was do
 
 ### Getting Started
 
+(If you feel like checking out the project without setting everything up, just keep scrolling down!)
+
 1. Fork the repo and clone to your local machine.
 2. Run 'npm install' from the root directory.
 3. Install MongoDB.
@@ -49,7 +51,7 @@ This is because you have not navigated to a primary record. You must include a p
 
 `localhost:3004/3`
 
-Once you have done this, you should see a web page that looks like the below screen grabs! If you feel like looking at the project without setting everything up, just keep scrolling down!
+Once you have done this, you should see a web page that looks like the below screen grabs! 
 
 ## Usage
 ### Ask a Question
