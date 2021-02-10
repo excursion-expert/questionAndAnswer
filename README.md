@@ -3,7 +3,7 @@
 # Question & Answer
 I worked on a team of engineers designing Excursion Expert, a travel information site. I designed the question and answer service on the site, where users could ask and answer questions about particular locations.
 
-The service was built with React backed with a MongoDB database and Express server.
+The service was built with React, backed with a MongoDB database and Express server.
 
 :rainbow: **_Want to skip to the fun part? Keep scrolling down to see GIFs of the site in action_** :rainbow:
 
