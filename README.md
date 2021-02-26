@@ -1,7 +1,7 @@
 <img src="https://github.com/excursion-expert/questionAndAnswer/blob/main/WhiteBackgroundLogoSuperCropped.png">
 
 # Question & Answer
-I worked on a team of engineers designing Excursion Expert, a travel information site. I designed the question and answer service on the site, where users could ask and answer questions about particular locations.
+I worked on a team of engineers designing Excursion Expert a travel information site. I designed the question and answer service on the site, where users could ask and answer questions about particular locations.
 
 The service was built with React, backed with a MongoDB database and Express server.
 
